@@ -25,7 +25,7 @@ Dataset yang digunakan memiliki dimensi sebesar 367 baris dan 8 kolom, dimana ma
 
 Berikut proses yang dilakukan dengan dataset tersebut
 
-![preparasi](/assignment-1/image/0.1.png)
+![preparasi](/assignment-1/image/big.png)
 
 ### Modeling
 
