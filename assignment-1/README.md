@@ -39,7 +39,7 @@ Splitting 1
 
 Hasil splitting 1
 
-1[resultsplitting1](/assignment-1/image/4.1.png)
+![resultsplitting1](/assignment-1/image/4.1.png)
 
 Splitting 2
 
