@@ -47,7 +47,7 @@ Splitting 2
 
 Hasil splitting 2
 
-1[resultsplitting2](/assignment-1/image/5.1.png)
+![resultsplitting2](/assignment-1/image/5.1.png)
 
 ### Modeling
 
