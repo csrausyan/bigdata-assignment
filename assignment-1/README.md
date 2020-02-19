@@ -23,12 +23,55 @@ Dataset yang digunakan memiliki dimensi sebesar 367 baris dan 8 kolom, dimana ma
 
 ### Data Preparation
 
-Berikut proses yang dilakukan dengan dataset tersebut
+Berikut proses yang dilakukan dengan dataset tersebut:
 
 ![preparasi](/assignment-1/image/big.png)
 
+Langkah pertama adalah mengekstrak data yang berada dalam file .csv dengan menggunakan CSV READER. berikut hasil dari bacaan CSV READER:
+
+![CSVREADER](/assignment-1/image/0.1.png)
+
+Setelah diekstrak, data yang diesktrak dipisah menjadi dua menggunakan _column splitter, yang pertama membuang tabel _suspected_ dan _death_, sedangkan yang kedua membuang tabel _recovered_ dan _confirmed_
+
+Splitting 1
+![splitting1](/assignment-1/image/4.png)
+
+Hasil splitting 1
+1[resultsplitting1](/assignment-1/image/4.1.png)
+
+Splitting 2
+![splitting2](/assignment-1/image/5.png)
+
+Hasil splitting 2
+1[resultsplitting2](/assignment-1/image/5.1.png)
+
 ### Modeling
+
+Data yang sudah di-_split_, disimpan di dua file yang berbeda, ***coronavirus - suspected_death.csv*** dan ***coronavirus - recovered_confirmed.xlsx***. file tersebut bisa dilihat di folder assignment-1
+![savesplittingresult](/assignment-1/image/2.png)
+
+untung proses Join, tabel yang digunakan adalah tabel hasil penghilangan _suspected_ dan _death_ dari yang pertama, dan tabel _recovered_ dan _confirmed_ dari tabel kedua ( yang mana dibuang pada pada hasil split kedua ). kedua tabel tersebut dijoin dengan node Joiner
+
+Konfigurasi Joiner
+![jointable](/assignment-1/image/6.png)
 
 ### Evaluation
 
+Hasil join dari kedua table sebelumnya.
+![joinresult](/assignment-1/image/6.1.png)
+
 ### Deployment
+
+Hasil join kemudian disimpan ke dalam file yang bernama ***coronavirus - combined_again.xlsx***, kemudian untuk menyimpan ke dalam database MySQL, diperlukan node _MySQL Connector ( Legacy )_ dan _Database Writer ( Legacy )_
+
+Konfigurasi _MySQL Connector_
+![mysqlconnector](/assignment-1/image/7.png)
+
+Hasil sambungan _MySQL Connector_
+![connection](/assignment-1/image/7.1.png)
+
+Konfigurasi _Database Writer_
+![databasewriter](/assignment-1/image/8.png)
+
+Hasil _Database Writer_ yang telah terkoneksi ke database MySQL
+![databaseresult](/assignment-1/image/8.1.png)
